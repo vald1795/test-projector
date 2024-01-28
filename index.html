@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar__brand" href="#">
+          <button class="btn btn--back">&lt; Back</button>
+        </a>
+        <div class="navbar__icon-container">
+          <a class="navbar__icon" href="#" id="favorites-button">
+            <i class="far fa-heart"></i>
+          </a>
+          <a class="navbar__icon" href="#">
+            <i class="far fa-folder"></i>
+          </a>
+        </div>
+      </nav>
+
+      <section class="filter-container">
+        <form id="filter-form" class="filter-container__form">
+          <div class="row">
+            <!-- Фильтр по артисту -->
+            <div class="col-12 col-md-3 mb-3">
+              <input
+                type="text"
+                class="form-control filter-container__input"
+                id="artist-input"
+                name="artist"
+                placeholder="Artist"
+                maxlength="50"
+              />
+            </div>
+            <!-- Фильтр по жанру -->
+            <div class="col-6 col-md-3 mb-3">
+              <select
+                class="form-control filter-container__select"
+                id="genre-select"
+                name="genre"
+              >
+                <option value="All">Genre(All)</option>
+                <option value="Punk">Punk</option>
+                <option value="Dub">Dub</option>
+                <option value="Funk">Funk</option>
+                <option value="Rock">Rock</option>
+                <option value="Black Metal">Black Metal</option>
+              </select>
+            </div>
+            <!-- Фильтр по десятилетию -->
+            <div class="col-6 col-md-3 mb-3">
+              <select
+                class="form-control filter-container__select"
+                id="decade-select"
+                name="decade"
+              >
+                <option value="All">Decade(All)</option>
+                <option value="1950-1960">1950-60 гг.</option>
+                <option value="1960-1970">1960-70 гг.</option>
+                <option value="1970-1980">1970-80 гг.</option>
+                <option value="1980-1990">1980-90 гг.</option>
+                <option value="1990-2000">1990-00 гг.</option>
+                <option value="2000-2010">2000-10 гг.</option>
+              </select>
+            </div>
+            <!-- Фильтр по стране -->
+            <div class="col-12 col-md-3 mb-3">
+              <select
+                class="form-control filter-container__select"
+                id="country-select"
+                name="country"
+              >
+                <option value="All">Country(All)</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--search">Search</button>
+        </form>
+      </section>
+
+      <section class="row card-gallery" id="card-gallery">
+        <!-- Здесь будут отображаться карточки -->
+      </section>
+
+      <nav aria-label="Page navigation" class="pagination" id="pagination">
+        <!-- Пагинация -->
+      </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
